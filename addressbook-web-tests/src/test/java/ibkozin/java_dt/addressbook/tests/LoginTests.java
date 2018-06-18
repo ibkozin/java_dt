@@ -1,4 +1,4 @@
-package ibkozin.java_dt.addressbook;
+package ibkozin.java_dt.addressbook.tests;
 
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.BeforeMethod;
