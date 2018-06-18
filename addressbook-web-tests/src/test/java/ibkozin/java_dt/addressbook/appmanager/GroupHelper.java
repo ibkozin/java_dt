@@ -12,7 +12,7 @@ public class GroupHelper {
     }
 
     public void returnToGroupPage() {
-        gotoGroupPage("group page");
+        gotoGroupPage();
     }
 
     public void submitGroupCreation() {
@@ -35,9 +35,8 @@ public class GroupHelper {
 
         wd.findElement(By.name("new")).click();
     }
-
-    public void gotoGroupPage(String groups) {
-        wd.findElement(By.linkText(groups)).click();
+    public void gotoGroupPage() {
+        wd.findElement(By.linkText("groups")).click();
     }
 
     public void deliteSelectedGroups() {
