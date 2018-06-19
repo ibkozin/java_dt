@@ -10,9 +10,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.*;
 
-public class AddNewTests {
+public class ContactCreationTests extends TestBase{
     FirefoxDriver wd;
-    
+
     @BeforeMethod
     public void setUp() throws Exception {
         wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
@@ -32,8 +32,9 @@ public class AddNewTests {
     }
 
     @Test
-    public void AddNewTests() {
-        fillAddNewForm("Igor", "------", "Kozin", "ibkozin", "CEO", "TESTIMPIRE", "201 Plano Pkwy", "1123225", "2452203", "3480409", "ibkozin@gmail.com", "Pushkinskaya");
+
+    public void testContactCreation() {
+        fillContactForm("Igor", "------", "Kozin", "ibkozin", "CEO", "TESTIMPIRE", "201 Plano Pkwy", "1123225", "2452203", "3480409", "ibkozin@gmail.com", "Pushkinskaya");
         submitAddNewCreation();
     }
 
@@ -42,7 +43,7 @@ public class AddNewTests {
     }
 
 
-    private void fillAddNewForm(String firstName, String middleName, String lastName, String nickName, String titlePerson, String companyName, String addressMain, String homePhone, String mobilePhone, String workPhone, String email1, String addressSecondary) {
+    private void fillContactForm(String firstName, String middleName, String lastName, String nickName, String titlePerson, String companyName, String addressMain, String homePhone, String mobilePhone, String workPhone, String email1, String addressSecondary) {
         wd.findElement(By.name("firstname")).click();
         wd.findElement(By.name("firstname")).clear();
         wd.findElement(By.name("firstname")).sendKeys(firstName);
@@ -85,7 +86,7 @@ public class AddNewTests {
     public void tearDown() {
         wd.quit();
     }
-    
+
     public static boolean isAlertPresent(FirefoxDriver wd) {
         try {
             wd.switchTo().alert();
