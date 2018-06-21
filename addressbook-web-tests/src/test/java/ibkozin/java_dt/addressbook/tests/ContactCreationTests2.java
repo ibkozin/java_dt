@@ -15,7 +15,7 @@ import org.openqa.selenium.*;
 import static org.openqa.selenium.OutputType.*;
 
 public class ContactCreationTests2 extends TestBase {
-//    FirefoxDriver wd;
+    FirefoxDriver wd;
     
     @BeforeMethod
     public void setUp() throws Exception {
