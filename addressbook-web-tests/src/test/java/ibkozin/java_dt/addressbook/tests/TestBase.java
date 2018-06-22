@@ -1,13 +1,13 @@
 package ibkozin.java_dt.addressbook.tests;
 
-import ibkozin.java_dt.addressbook.appmanager.AplicationManager;
+import ibkozin.java_dt.addressbook.appmanager.ApplicationManager;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 
 public class TestBase {
 
-    protected final AplicationManager app = new AplicationManager();
+    protected final ApplicationManager app = new ApplicationManager();
 
     @BeforeMethod
     public void setUp() throws Exception {
