@@ -6,6 +6,8 @@
       <module name="2-address-book-web-tests_test" target="1.8" />
       <module name="addressbook-web-tests_main" target="1.8" />
       <module name="addressbook-web-tests_test" target="1.8" />
+      <module name="litecart_main" target="1.8" />
+      <module name="litecart_test" target="1.8" />
       <module name="Sandbox_main" target="1.8" />
       <module name="Sandbox_test" target="1.8" />
     </bytecodeTargetLevel>
